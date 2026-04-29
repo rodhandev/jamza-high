@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>jamza · zapatos de vestir de cuero</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          serif: ['"Playfair Display"', 'Georgia', 'serif'],
+          sans:  ['Inter', 'system-ui', 'sans-serif'],
+        },
+        colors: {
+          ink:   '#0a0a0a',
+          panel: '#0f0f0f',
+          card:  '#1a1a1a',
+          warm:  '#f5f0eb',
+          gold:  '#c9a96e',
+          goldH: '#b8955a',
+          wa:    '#25D366',
+          waH:   '#1ebe57',
+        },
+      },
+    },
+  };
+</script>
+<style>
+  html, body { background:#0a0a0a; color:#f5f0eb; }
+  body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  .hero-title { font-family:'Playfair Display', Georgia, serif; letter-spacing:-0.03em; line-height:0.92; font-weight:700; }
+  .num { font-family:'Playfair Display', Georgia, serif; font-weight:400; }
+  .nav-link { transition: color .2s ease; }
+  .hairline { background: linear-gradient(90deg, transparent, rgba(245,240,235,.18), transparent); }
+  .grain::after {
+    content:""; position:absolute; inset:0; pointer-events:none; opacity:.06; mix-blend-mode:overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.5 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+  html { scroll-behavior: smooth; }
+  .marquee { mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+  @keyframes drift { from { transform: translateX(0);} to { transform: translateX(-50%);} }
+  .drift { animation: drift 60s linear infinite; }
+</style>
+</head>
+<body class="bg-ink text-warm">
+
+<!-- ============================================ -->
+<!-- HERO                                          -->
+<!-- ============================================ -->
+<section data-screen-label="01 Hero" class="relative h-screen w-full overflow-hidden bg-ink grain">
+  <!-- background video -->
+  <video
+    class="absolute inset-0 w-full h-full object-cover opacity-60"
+    autoplay loop muted playsinline
+    poster=""
+    src="assets/hero.mp4"></video>
+
+  <!-- vignette overlay -->
+  <div class="pointer-events-none absolute inset-0"
+       style="background:
+         radial-gradient(120% 80% at 50% 40%, rgba(10,10,10,0) 40%, rgba(10,10,10,.55) 100%),
+         linear-gradient(180deg, rgba(10,10,10,.55) 0%, rgba(10,10,10,0) 18%, rgba(10,10,10,0) 60%, rgba(10,10,10,.85) 100%);"></div>
+
+  <!-- ===== floating navbar ===== -->
+  <header class="absolute top-0 inset-x-0 z-20 px-6 md:px-10 pt-6">
+    <div class="flex items-center justify-between gap-3">
+      <!-- logo pill -->
+      <a href="#" class="flex items-center gap-2 bg-black/70 backdrop-blur rounded-full pl-4 pr-6 py-3 ring-1 ring-white/10">
+        <svg width="20" height="20" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M4 6h6v14a4 4 0 0 1-4 4H4" stroke="#f5f0eb" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M14 24V6l7 12 7-12v18" stroke="#f5f0eb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="font-serif tracking-[0.22em] text-sm">jamza</span>
+      </a>
+
+      <!-- center pill links -->
+      <nav class="hidden md:flex items-center gap-1 bg-black/60 backdrop-blur rounded-full px-2 py-2 ring-1 ring-white/10">
+        <a href="#"          class="nav-link text-stone-300 hover:text-white text-sm rounded-full px-4 py-2">inicio</a>
+        <a href="#catalogo"  class="nav-link text-stone-300 hover:text-white text-sm rounded-full px-4 py-2">catálogo</a>
+        <a href="#nosotros"  class="nav-link text-stone-300 hover:text-white text-sm rounded-full px-4 py-2">nosotros</a>
+        <a href="#contacto"  class="nav-link text-stone-300 hover:text-white text-sm rounded-full px-4 py-2">contacto</a>
+      </nav>
+
+      <!-- whatsapp cta -->
+      <a href="https://wa.me/" target="_blank" rel="noreferrer"
+         class="inline-flex items-center gap-2 bg-gold text-black rounded-full px-5 md:px-6 py-3 text-sm font-medium hover:bg-goldH transition-colors">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 3.5A11.5 11.5 0 0 0 2.4 17.7L1 23l5.5-1.4A11.5 11.5 0 1 0 20 3.5Zm-8 19.4a9.4 9.4 0 0 1-4.8-1.3l-.3-.2-3.3.8.9-3.2-.2-.3a9.4 9.4 0 1 1 7.7 4.2Zm5.4-7c-.3-.1-1.7-.8-2-.9s-.5-.1-.7.1-.8.9-1 1.1-.4.2-.7.1a7.7 7.7 0 0 1-3.8-3.3c-.3-.5.3-.5.8-1.5a.6.6 0 0 0 0-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5c0 1.5 1.1 2.9 1.2 3.1A8.6 8.6 0 0 0 13.7 18c2 .8 2.4.7 2.9.7a2.8 2.8 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.2-.3-.2-.6-.4Z"/></svg>
+        <span>WhatsApp</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ===== Hero typography (staggered) ===== -->
+  <div class="absolute inset-0 z-10 select-none">
+    <!-- top-left: elegancia -->
+    <h1 class="hero-title absolute left-4 md:left-10 top-[16%] text-[#f5f0eb]"
+        style="font-size: clamp(72px, 13vw, 220px);">elegancia</h1>
+
+    <!-- right: en cada -->
+    <h1 class="hero-title absolute right-4 md:right-10 top-[36%] text-right text-[#f5f0eb]"
+        style="font-size: clamp(72px, 13vw, 220px);">en cada</h1>
+
+    <!-- center-ish: paso -->
+    <h1 class="hero-title absolute left-[20%] md:left-[30%] top-[56%] text-[#f5f0eb]"
+        style="font-size: clamp(72px, 13vw, 220px);">paso<span class="text-gold">.</span></h1>
+
+    <!-- description block -->
+    <p class="absolute left-6 md:left-10 top-[44%] max-w-[220px] text-[14px] leading-relaxed text-[#f5f0eb]/80 hidden md:block">
+      <span class="block uppercase tracking-[0.3em] text-[10px] text-gold mb-3">— sub.zero collection</span>
+      cuero genuino, acabado artesanal. diseñado para el hombre que cuida su imagen.
+    </p>
+
+    <!-- top-right stat -->
+    <div class="absolute right-6 md:right-20 top-[12%] text-right">
+      <div class="num text-5xl md:text-6xl text-warm">+3</div>
+      <div class="text-[10px] tracking-[0.28em] uppercase text-gold mt-1">estilos exclusivos</div>
+    </div>
+
+    <!-- bottom-left stat -->
+    <div class="absolute left-6 md:left-20 bottom-20 hidden sm:block">
+      <div class="num text-5xl md:text-6xl text-warm">100<span class="text-gold">%</span></div>
+      <div class="text-[10px] tracking-[0.28em] uppercase text-gold mt-1">cuero genuino</div>
+    </div>
+
+    <!-- bottom-right stat -->
+    <div class="absolute right-6 md:right-20 bottom-16 text-right hidden sm:block">
+      <div class="num text-5xl md:text-6xl text-warm">38–44</div>
+      <div class="text-[10px] tracking-[0.28em] uppercase text-gold mt-1">tallas disponibles</div>
+    </div>
+
+    <!-- bottom CTA + scroll cue -->
+    <div class="absolute left-1/2 -translate-x-1/2 bottom-6 md:bottom-8 flex flex-col items-center gap-3 z-20">
+      <a href="#catalogo"
+         class="inline-flex items-center gap-3 bg-warm text-black rounded-full pl-6 pr-3 py-2 text-sm font-medium hover:bg-white transition-colors">
+        <span>ver catálogo</span>
+        <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-black text-warm">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 4v16M5 13l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </a>
+      <div class="text-[10px] tracking-[0.28em] uppercase text-warm/50">elegancia · oxford · mocasín</div>
+    </div>
+  </div>
+
+  <!-- bottom gradient blend -->
+  <div class="pointer-events-none absolute bottom-0 left-0 right-0 h-56 bg-gradient-to-b from-transparent to-ink z-[5]"></div>
+</section>
+
+<!-- ============================================ -->
+<!-- TICKER                                        -->
+<!-- ============================================ -->
+<div class="bg-ink border-y border-white/5 overflow-hidden marquee">
+  <div class="flex whitespace-nowrap drift py-5 text-warm/70">
+    <div class="flex items-center gap-12 pr-12 text-sm tracking-[0.28em] uppercase">
+      <span>elegancia que se siente en cada paso</span>
+      <span class="text-gold">✦</span>
+      <span>cuero genuino · acabado artesanal</span>
+      <span class="text-gold">✦</span>
+      <span>oxford · mocasín · derby</span>
+      <span class="text-gold">✦</span>
+      <span>tallas 38 — 44</span>
+      <span class="text-gold">✦</span>
+      <span>envíos a todo el país</span>
+      <span class="text-gold">✦</span>
+    </div>
+    <div class="flex items-center gap-12 pr-12 text-sm tracking-[0.28em] uppercase" aria-hidden="true">
+      <span>elegancia que se siente en cada paso</span>
+      <span class="text-gold">✦</span>
+      <span>cuero genuino · acabado artesanal</span>
+      <span class="text-gold">✦</span>
+      <span>oxford · mocasín · derby</span>
+      <span class="text-gold">✦</span>
+      <span>tallas 38 — 44</span>
+      <span class="text-gold">✦</span>
+      <span>envíos a todo el país</span>
+      <span class="text-gold">✦</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- CATÁLOGO                                      -->
+<!-- ============================================ -->
+<section id="catalogo" data-screen-label="02 Catálogo" class="bg-panel py-24 px-6 md:px-20">
+  <!-- header row -->
+  <div class="flex items-end justify-between gap-8 mb-12 md:mb-16">
+    <div>
+      <div class="text-[11px] tracking-[0.32em] uppercase text-gold mb-5">— catálogo · ss26</div>
+      <h2 class="font-serif text-warm leading-[0.95]"
+          style="font-size: clamp(48px, 8vw, 96px); letter-spacing:-0.02em;">
+        nuestra<br/>colección<span class="text-gold">.</span>
+      </h2>
+    </div>
+    <p class="hidden md:block max-w-sm text-sm text-warm/60 leading-relaxed pb-3">
+      tres siluetas para el guardarropa esencial. cada par se construye a mano, en cuero vacuno con curtido vegetal y suela de cuero pespuntada.
+    </p>
+  </div>
+
+  <!-- grid -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+
+    <!-- card 1 — oxford café -->
+    <article class="group bg-card rounded-2xl overflow-hidden ring-1 ring-white/5 hover:ring-gold/40 transition-all duration-300 flex flex-col">
+      <div class="relative aspect-square bg-[#111] overflow-hidden">
+        <span class="absolute top-4 left-4 z-10 text-[10px] tracking-[0.28em] uppercase text-warm/60 bg-black/60 backdrop-blur rounded-full px-3 py-1 ring-1 ring-white/10">01 · oxford</span>
+        <span class="absolute top-4 right-4 z-10 num text-warm/40 text-2xl">$—</span>
+        <img src="assets/mocasin-cafe.png" alt="Oxford Café Oscuro"
+             class="absolute inset-0 w-full h-full object-contain p-6 transition-transform duration-700 group-hover:scale-[1.04]" />
+      </div>
+      <div class="p-6 flex flex-col flex-1">
+        <h3 class="font-serif text-xl text-warm">Oxford Café Oscuro</h3>
+        <div class="text-[10px] text-gold uppercase tracking-[0.28em] mt-1">cuero genuino</div>
+        <p class="text-sm text-warm/60 mt-3">Estilo clásico con cordones, cuero color bordo.</p>
+        <div class="mt-5 flex items-center gap-2 text-[11px] text-warm/40">
+          <span class="inline-block w-3 h-3 rounded-full" style="background:#5a2a23"></span>
+          <span>bordo · 38 → 44</span>
+        </div>
+        <a href="https://wa.me/" target="_blank" rel="noreferrer"
+           class="mt-auto pt-5 block">
+          <span class="block w-full text-center border border-gold text-gold rounded-full py-2.5 text-sm hover:bg-gold hover:text-black transition-colors">
+            consultar por whatsapp
+          </span>
+        </a>
+      </div>
+    </article>
+
+    <!-- card 2 — oxford negro -->
+    <article class="group bg-card rounded-2xl overflow-hidden ring-1 ring-white/5 hover:ring-gold/40 transition-all duration-300 flex flex-col">
+      <div class="relative aspect-square bg-[#111] overflow-hidden">
+        <span class="absolute top-4 left-4 z-10 text-[10px] tracking-[0.28em] uppercase text-warm/60 bg-black/60 backdrop-blur rounded-full px-3 py-1 ring-1 ring-white/10">02 · oxford</span>
+        <span class="absolute top-4 right-4 z-10 num text-warm/40 text-2xl">$—</span>
+        <img src="assets/oxford-negro.png" alt="Oxford Negro"
+             class="absolute inset-0 w-full h-full object-contain p-6 transition-transform duration-700 group-hover:scale-[1.04]" />
+      </div>
+      <div class="p-6 flex flex-col flex-1">
+        <h3 class="font-serif text-xl text-warm">Oxford Negro</h3>
+        <div class="text-[10px] text-gold uppercase tracking-[0.28em] mt-1">cuero genuino</div>
+        <p class="text-sm text-warm/60 mt-3">Corte limpio, ideal para traje o uniforme.</p>
+        <div class="mt-5 flex items-center gap-2 text-[11px] text-warm/40">
+          <span class="inline-block w-3 h-3 rounded-full bg-black ring-1 ring-warm/20"></span>
+          <span>negro · 38 → 44</span>
+        </div>
+        <a href="https://wa.me/" target="_blank" rel="noreferrer"
+           class="mt-auto pt-5 block">
+          <span class="block w-full text-center border border-gold text-gold rounded-full py-2.5 text-sm hover:bg-gold hover:text-black transition-colors">
+            consultar por whatsapp
+          </span>
+        </a>
+      </div>
+    </article>
+
+    <!-- card 3 — mocasín negro -->
+    <article class="group bg-card rounded-2xl overflow-hidden ring-1 ring-white/5 hover:ring-gold/40 transition-all duration-300 flex flex-col">
+      <div class="relative aspect-square bg-[#111] overflow-hidden">
+        <span class="absolute top-4 left-4 z-10 text-[10px] tracking-[0.28em] uppercase text-warm/60 bg-black/60 backdrop-blur rounded-full px-3 py-1 ring-1 ring-white/10">03 · mocasín</span>
+        <span class="absolute top-4 right-4 z-10 num text-warm/40 text-2xl">$—</span>
+        <img src="assets/mocasin-negro.png" alt="Mocasín Negro"
+             class="absolute inset-0 w-full h-full object-contain p-6 transition-transform duration-700 group-hover:scale-[1.04]" />
+      </div>
+      <div class="p-6 flex flex-col flex-1">
+        <h3 class="font-serif text-xl text-warm">Mocasín Negro</h3>
+        <div class="text-[10px] text-gold uppercase tracking-[0.28em] mt-1">cuero genuino</div>
+        <p class="text-sm text-warm/60 mt-3">Sin cordones, detalle metálico, textura artesanal.</p>
+        <div class="mt-5 flex items-center gap-2 text-[11px] text-warm/40">
+          <span class="inline-block w-3 h-3 rounded-full bg-black ring-1 ring-warm/20"></span>
+          <span>negro · 38 → 44</span>
+        </div>
+        <a href="https://wa.me/" target="_blank" rel="noreferrer"
+           class="mt-auto pt-5 block">
+          <span class="block w-full text-center border border-gold text-gold rounded-full py-2.5 text-sm hover:bg-gold hover:text-black transition-colors">
+            consultar por whatsapp
+          </span>
+        </a>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- footer note under grid -->
+  <div class="mt-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border-t border-white/5 pt-8">
+    <div class="text-[11px] tracking-[0.28em] uppercase text-warm/40">
+      todos los pares incluyen bolsa de tela y caja jamza
+    </div>
+    <a href="https://wa.me/" target="_blank" rel="noreferrer"
+       class="inline-flex items-center gap-3 text-sm text-warm hover:text-gold transition-colors">
+      <span>solicitar catálogo completo</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- FOOTER                                        -->
+<!-- ============================================ -->
+<footer id="contacto" class="bg-ink border-t border-white/5 px-6 md:px-20 py-12">
+  <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+    <div>
+      <div class="font-serif tracking-[0.22em] text-warm">jamza</div>
+      <div class="text-xs text-warm/40 mt-2">elegancia que se siente en cada paso · © 2026</div>
+    </div>
+    <div class="flex flex-wrap gap-x-8 gap-y-2 text-xs uppercase tracking-[0.28em] text-warm/50">
+      <a href="#" class="hover:text-warm">inicio</a>
+      <a href="#catalogo" class="hover:text-warm">catálogo</a>
+      <a href="#nosotros" class="hover:text-warm">nosotros</a>
+      <a href="#contacto" class="hover:text-warm">contacto</a>
+    </div>
+  </div>
+</footer>
+
+<!-- floating WhatsApp button -->
+<a href="https://wa.me/" target="_blank" rel="noreferrer"
+   aria-label="Chatear por WhatsApp"
+   class="fixed bottom-6 right-6 z-50 bg-wa text-white rounded-full p-4 shadow-lg shadow-black/50 hover:bg-waH transition-colors">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M20 3.5A11.5 11.5 0 0 0 2.4 17.7L1 23l5.5-1.4A11.5 11.5 0 1 0 20 3.5Zm-8 19.4a9.4 9.4 0 0 1-4.8-1.3l-.3-.2-3.3.8.9-3.2-.2-.3a9.4 9.4 0 1 1 7.7 4.2Zm5.4-7c-.3-.1-1.7-.8-2-.9s-.5-.1-.7.1-.8.9-1 1.1-.4.2-.7.1a7.7 7.7 0 0 1-3.8-3.3c-.3-.5.3-.5.8-1.5a.6.6 0 0 0 0-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5c0 1.5 1.1 2.9 1.2 3.1A8.6 8.6 0 0 0 13.7 18c2 .8 2.4.7 2.9.7a2.8 2.8 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.2-.3-.2-.6-.4Z"/>
+  </svg>
+</a>
+
+</body>
+</html>
